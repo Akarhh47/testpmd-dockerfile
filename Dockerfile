@@ -25,7 +25,7 @@
 FROM ubuntu
 COPY ./dpdk-container-lab /root/dpdk-container-lab
 WORKDIR /root/dpdk-container-lab
-COPY ./dpdk /usr/src/dpdk
+#COPY ./dpdk /usr/src/dpdk
 RUN apt-get update && apt-get install -y build-essential automake python-pip libcap-ng-dev gawk pciutils linux-headers-$(uname -a | awk '{print $3}') vim kmod
 RUN pip install -U pip six
 ENV DPDK_DIR "/usr/src/dpdk"
